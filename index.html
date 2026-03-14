@@ -928,6 +928,92 @@
 
     .toast.show { transform: translateY(0); opacity: 1; }
 
+    /* ── Cierre ── */
+    #cierre {
+      background: var(--lavender);
+      padding: 6rem 0 5rem;
+      text-align: center;
+    }
+
+    .cierre-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cierre-photo-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .cierre-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--white);
+      box-shadow:
+        0 0 0 1px rgba(155,77,138,0.2),
+        0 20px 60px rgba(37,13,56,0.18);
+      filter: brightness(1.02) saturate(0.97);
+      display: block;
+    }
+
+    .cierre-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 1px solid rgba(155,77,138,0.2);
+      pointer-events: none;
+    }
+
+    .cierre-ring--outer {
+      inset: -24px;
+      border-style: dashed;
+      border-color: rgba(212,168,203,0.18);
+      animation: spin-slow 30s linear infinite;
+    }
+
+    @keyframes spin-slow {
+      to { transform: rotate(360deg); }
+    }
+
+    .cierre-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--plum);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+    }
+
+    .cierre-role {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .cierre-line {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--rose), var(--mauve2));
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+
+    .cierre-quote {
+      font-family: 'Raleway', sans-serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--slate);
+      max-width: 380px;
+    }
+
     /* ── Footer ── */
     footer {
       background: var(--plum);
@@ -1530,6 +1616,21 @@
           </form>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CIERRE ═══════════ -->
+  <section id="cierre">
+    <div class="cierre-inner">
+      <div class="cierre-photo-wrap">
+        <img src="ivonne.jpg" alt="Ivonne Sánchez R." class="cierre-photo" />
+        <div class="cierre-ring"></div>
+        <div class="cierre-ring cierre-ring--outer"></div>
+      </div>
+      <p class="cierre-name">Ivonne Sánchez R.</p>
+      <p class="cierre-role">Gerente General &nbsp;·&nbsp; Directora Hotelera</p>
+      <div class="cierre-line"></div>
+      <p class="cierre-quote">"Liderazgo con propósito, resultados con constancia."</p>
     </div>
   </section>
 
