@@ -7,7 +7,7 @@
   <meta name="description" content="Ivonne Sánchez Ramos — Más de 20 años de liderazgo ejecutivo en la industria hotelera. Gerente General con trayectoria en Accor, Vidanta y City Express." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     /* ── Reset & Base ── */
@@ -39,7 +39,7 @@
     }
 
     h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       line-height: 1.25;
     }
 
@@ -108,7 +108,7 @@
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 1.15rem;
       color: var(--white);
       letter-spacing: 0.02em;
@@ -202,7 +202,7 @@
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 4rem;
-      align-items: center;
+      align-items: flex-start;
       padding: 8rem 0 5rem;
       width: 100%;
     }
@@ -250,7 +250,7 @@
       color: rgba(255,255,255,0.88);
       max-width: 520px;
       margin-bottom: 2.2rem;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-style: italic;
       line-height: 1.55;
     }
@@ -268,7 +268,7 @@
     }
 
     .hero-stat .number {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 2rem;
       color: var(--mauve2);
       font-weight: 700;
@@ -328,69 +328,63 @@
     .hero-photo-wrap {
       position: relative;
       flex-shrink: 0;
+      margin-top: 0.5rem;
     }
 
-    /* outer decorative ring */
+    /* single subtle ring */
     .hero-photo-wrap::before {
       content: '';
       position: absolute;
-      inset: -12px;
+      inset: -8px;
       border-radius: 50%;
-      border: 1.5px solid rgba(212,168,203,0.35);
+      border: 1px solid rgba(212,168,203,0.22);
     }
 
-    /* inner ring */
-    .hero-photo-wrap::after {
-      content: '';
-      position: absolute;
-      inset: -24px;
-      border-radius: 50%;
-      border: 1px dashed rgba(212,168,203,0.18);
-    }
+    .hero-photo-wrap::after { display: none; }
 
     .hero-photo {
-      width: 300px;
-      height: 300px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
-      border: 5px solid rgba(255,255,255,0.12);
+      border: 3px solid rgba(255,255,255,0.1);
       box-shadow:
-        0 0 0 1px rgba(212,168,203,0.3),
-        0 30px 80px rgba(0,0,0,0.5),
-        inset 0 0 60px rgba(155,77,138,0.15);
+        0 0 0 1px rgba(212,168,203,0.18),
+        0 16px 48px rgba(0,0,0,0.4);
       display: block;
-      filter: brightness(1.04) contrast(1.02);
+      opacity: 0.88;
+      filter: brightness(1.02) saturate(0.95);
     }
 
-    /* Experience badge */
+    /* Experience badge — smaller, tucked */
     .hero-badge {
       position: absolute;
-      bottom: 10px;
-      right: -10px;
+      bottom: 4px;
+      right: -8px;
       background: linear-gradient(135deg, var(--rose), var(--plum3));
       color: var(--white);
-      width: 110px; height: 110px;
+      width: 72px; height: 72px;
       border-radius: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      box-shadow: 0 8px 30px rgba(155,77,138,0.5);
-      border: 3px solid var(--plum);
+      box-shadow: 0 4px 16px rgba(155,77,138,0.45);
+      border: 2px solid var(--plum);
     }
 
     .hero-badge .yrs {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: 1;
     }
 
     .hero-badge .yrs-lbl {
-      font-size: 0.6rem;
-      letter-spacing: 0.08em;
+      font-size: 0.48rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       opacity: 0.85;
       font-family: 'Inter', sans-serif;
@@ -441,7 +435,7 @@
 
     .about-card::before {
       content: '"';
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 14rem;
       color: rgba(255,255,255,0.04);
       position: absolute;
@@ -452,7 +446,7 @@
     }
 
     .about-card-quote {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 1.18rem;
       font-style: italic;
       line-height: 1.65;
@@ -479,7 +473,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       text-align: center;
       box-shadow: 0 8px 30px rgba(155,77,138,0.45);
     }
@@ -574,7 +568,7 @@
     }
 
     .timeline-role {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 1.3rem; color: var(--plum); margin-bottom: 0.8rem;
     }
 
@@ -651,13 +645,13 @@
     .achievement-icon svg { color: var(--mauve2); }
 
     .achievement-metric {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 2.2rem; font-weight: 700;
       color: var(--mauve2); line-height: 1; margin-bottom: 0.4rem;
     }
 
     .achievement-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 1.05rem; color: var(--white); margin-bottom: 0.6rem;
     }
 
@@ -708,7 +702,7 @@
     }
 
     .skill-icon svg { color: var(--mauve2); }
-    .skill-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--plum); margin-bottom: 0.7rem; }
+    .skill-title { font-family: 'Raleway', sans-serif; font-size: 1.1rem; color: var(--plum); margin-bottom: 0.7rem; }
     .skill-desc  { font-size: 0.9rem; color: var(--slate); line-height: 1.7; }
 
     /* ══════════════════════════════════════
@@ -741,10 +735,10 @@
     }
 
     .edu-icon svg { color: var(--mauve2); }
-    .edu-degree  { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--plum); margin-bottom: 0.3rem; }
+    .edu-degree  { font-family: 'Raleway', sans-serif; font-size: 1.05rem; color: var(--plum); margin-bottom: 0.3rem; }
     .edu-field   { font-size: 0.85rem; color: var(--muted); }
 
-    .certs-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--plum); margin-bottom: 1.5rem; }
+    .certs-title { font-family: 'Raleway', sans-serif; font-size: 1.4rem; color: var(--plum); margin-bottom: 1.5rem; }
 
     .certs-grid { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 
@@ -761,7 +755,7 @@
 
     .cert-badge:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(37,13,56,0.22); }
 
-    .cert-badge .cert-label { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--mauve2); font-weight: 700; }
+    .cert-badge .cert-label { font-family: 'Raleway', sans-serif; font-size: 1.8rem; color: var(--mauve2); font-weight: 700; }
     .cert-badge .cert-name  { font-size: 0.78rem; color: rgba(255,255,255,0.68); letter-spacing: 0.06em; text-transform: uppercase; }
 
     /* ══════════════════════════════════════
@@ -897,7 +891,7 @@
       text-align: center;
     }
 
-    .footer-name  { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
+    .footer-name  { font-family: 'Raleway', sans-serif; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
     .footer-copy  { font-size: 0.78rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
 
     /* ── Scroll animations ── */
@@ -942,7 +936,7 @@
       .hero-tagline { text-align: center; }
       .hero-meta    { justify-content: center; }
       .hero-actions { justify-content: center; }
-      .hero-photo   { width: 220px; height: 220px; }
+      .hero-photo   { width: 160px; height: 160px; }
 
       .about-grid, .contact-grid, .education-grid {
         grid-template-columns: 1fr;
@@ -961,7 +955,7 @@
       .achievements-grid { grid-template-columns: 1fr; }
       .skills-grid       { grid-template-columns: 1fr; }
       .certs-grid        { justify-content: center; }
-      .hero-photo        { width: 180px; height: 180px; }
+      .hero-photo        { width: 140px; height: 140px; }
     }
   </style>
 </head>
