@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivonne Sánchez Ramos | Directora de Hospitalidad y Gestión Hotelera</title>
+  <meta name="description" content="Ivonne Sánchez Ramos — Más de 20 años de liderazgo ejecutivo en la industria hotelera. Gerente General con trayectoria en Accor, Vidanta y City Express." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --plum:    #250d38;   /* deep plum — hero/dark bg     */
+      --plum2:   #3a1654;   /* medium plum                  */
+      --plum3:   #52226e;   /* lighter plum                 */
+      --rose:    #9b4d8a;   /* rose/mulberry accent         */
+      --mauve:   #b87aab;   /* mauve — replaces gold        */
+      --mauve2:  #d4a8cb;   /* light mauve — replaces gold2 */
+      --lavender:#f5eef9;   /* very light lavender bg       */
+      --white:   #ffffff;
+      --text:    #2d2035;
+      --slate:   #5a4a68;
+      --muted:   #876e99;
+      --border:  #e8dff0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.25;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* ── Utility ── */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--plum);
+      margin-bottom: 1.1rem;
+    }
+
+    .divider {
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--mauve2));
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .section-intro {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: background 0.35s, box-shadow 0.35s, padding 0.35s;
+    }
+
+    nav.scrolled {
+      background: rgba(37, 13, 56, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+      padding: 0.6rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo span { color: var(--mauve2); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--mauve2); }
+
+    .nav-cta {
+      background: var(--rose);
+      color: var(--white) !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 30px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--plum3) !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum2) 50%, #1e0a2e 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle dot grid */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    /* decorative bloom */
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(155,77,138,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+      padding: 8rem 0 5rem;
+      width: 100%;
+    }
+
+    /* — Left content — */
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 36px; height: 1px;
+      background: var(--mauve2);
+    }
+
+    .hero-eyebrow span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mauve2);
+    }
+
+    .hero-name {
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      color: var(--white);
+      margin-bottom: 0.35rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.6rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.88);
+      max-width: 520px;
+      margin-bottom: 2.2rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
+    .hero-tagline strong {
+      color: var(--mauve2);
+      font-style: normal;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--mauve2);
+      font-weight: 700;
+      display: block;
+      line-height: 1;
+    }
+
+    .hero-stat .label {
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.48);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--rose), var(--plum3));
+      color: var(--white);
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(155,77,138,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(155,77,138,0.55);
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.28);
+      color: rgba(255,255,255,0.82);
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--mauve2);
+      color: var(--mauve2);
+    }
+
+    /* — Photo column — */
+    .hero-photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* outer decorative ring */
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(212,168,203,0.35);
+    }
+
+    /* inner ring */
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -24px;
+      border-radius: 50%;
+      border: 1px dashed rgba(212,168,203,0.18);
+    }
+
+    .hero-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 5px solid rgba(255,255,255,0.12);
+      box-shadow:
+        0 0 0 1px rgba(212,168,203,0.3),
+        0 30px 80px rgba(0,0,0,0.5),
+        inset 0 0 60px rgba(155,77,138,0.15);
+      display: block;
+      filter: brightness(1.04) contrast(1.02);
+    }
+
+    /* Experience badge */
+    .hero-badge {
+      position: absolute;
+      bottom: 10px;
+      right: -10px;
+      background: linear-gradient(135deg, var(--rose), var(--plum3));
+      color: var(--white);
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(155,77,138,0.5);
+      border: 3px solid var(--plum);
+    }
+
+    .hero-badge .yrs {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .hero-badge .yrs-lbl {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.3;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      animation: bounce 2.2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ══════════════════════════════════════
+       SOBRE MÍ
+    ══════════════════════════════════════ */
+    #sobre-mi { padding: 7rem 0; background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-card {
+      background: linear-gradient(135deg, var(--plum), var(--plum2));
+      border-radius: 8px;
+      padding: 3rem;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 14rem;
+      color: rgba(255,255,255,0.04);
+      position: absolute;
+      top: -2.5rem;
+      left: 1rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .about-card-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem;
+      font-style: italic;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.9);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-card-accent {
+      width: 48px; height: 2px;
+      background: linear-gradient(90deg, var(--rose), var(--mauve2));
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: linear-gradient(135deg, var(--rose), var(--mauve));
+      color: var(--white);
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(155,77,138,0.45);
+    }
+
+    .about-badge .years      { font-size: 2.4rem; font-weight: 700; line-height: 1; }
+    .about-badge .years-label {
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0.88; font-family: 'Inter', sans-serif;
+    }
+
+    .about-text p {
+      color: var(--slate);
+      font-size: 1.01rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .about-pillars { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+
+    .pillar { display: flex; align-items: flex-start; gap: 1rem; }
+
+    .pillar-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      background: linear-gradient(135deg, var(--plum), var(--plum3));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .pillar-icon svg { color: var(--mauve2); }
+
+    .pillar-text strong {
+      display: block; font-family: 'Inter', sans-serif;
+      font-weight: 600; color: var(--plum); font-size: 0.9rem; margin-bottom: 0.2rem;
+    }
+
+    .pillar-text span { font-size: 0.85rem; color: var(--muted); }
+
+    /* ══════════════════════════════════════
+       EXPERIENCIA
+    ══════════════════════════════════════ */
+    #experiencia { padding: 7rem 0; background: var(--lavender); }
+
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--rose), var(--plum) 80%, transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+      padding-left: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.55rem; top: 6px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--rose);
+      border: 3px solid var(--lavender);
+      box-shadow: 0 0 0 2px var(--rose);
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2rem 2.2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(37,13,56,0.06);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+
+    .timeline-card:hover {
+      box-shadow: 0 8px 32px rgba(37,13,56,0.13);
+      transform: translateY(-2px);
+    }
+
+    .timeline-company {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 0.3rem;
+    }
+
+    .timeline-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--plum); margin-bottom: 0.8rem;
+    }
+
+    .timeline-desc { color: var(--slate); font-size: 0.95rem; line-height: 1.7; }
+
+    .timeline-tag {
+      display: inline-block; margin-top: 1rem;
+      background: rgba(37,13,56,0.07); color: var(--plum2);
+      font-size: 0.75rem; font-weight: 500;
+      padding: 0.25rem 0.85rem; border-radius: 20px;
+    }
+
+    /* ══════════════════════════════════════
+       LOGROS
+    ══════════════════════════════════════ */
+    #logros {
+      padding: 7rem 0;
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum2) 60%, #1e0a2e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #logros::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(155,77,138,0.15) 0%, transparent 70%);
+    }
+
+    #logros .section-title { color: var(--white); }
+    #logros .section-label { color: var(--mauve2); }
+    #logros .section-intro  { color: rgba(255,255,255,0.55); }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .achievement-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 2.2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    .achievement-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(212,168,203,0.4);
+      transform: translateY(-4px);
+    }
+
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, var(--rose), var(--mauve2));
+    }
+
+    .achievement-icon {
+      width: 52px; height: 52px;
+      background: rgba(155,77,138,0.18);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .achievement-icon svg { color: var(--mauve2); }
+
+    .achievement-metric {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--mauve2); line-height: 1; margin-bottom: 0.4rem;
+    }
+
+    .achievement-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; color: var(--white); margin-bottom: 0.6rem;
+    }
+
+    .achievement-desc { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+    /* ══════════════════════════════════════
+       HABILIDADES
+    ══════════════════════════════════════ */
+    #habilidades { padding: 7rem 0; background: var(--white); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+      position: relative; overflow: hidden;
+    }
+
+    .skill-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--rose), var(--mauve2));
+      transition: width 0.35s;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 8px 30px rgba(37,13,56,0.1);
+      transform: translateY(-3px);
+      border-color: rgba(155,77,138,0.25);
+    }
+
+    .skill-card:hover::after { width: 100%; }
+
+    .skill-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--plum), var(--plum3));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .skill-icon svg { color: var(--mauve2); }
+    .skill-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--plum); margin-bottom: 0.7rem; }
+    .skill-desc  { font-size: 0.9rem; color: var(--slate); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       FORMACIÓN
+    ══════════════════════════════════════ */
+    #formacion { padding: 7rem 0; background: var(--lavender); }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .edu-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      transition: box-shadow 0.25s;
+    }
+
+    .edu-card:hover { box-shadow: 0 6px 24px rgba(37,13,56,0.1); }
+
+    .edu-icon {
+      width: 50px; height: 50px; min-width: 50px;
+      background: var(--plum); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .edu-icon svg { color: var(--mauve2); }
+    .edu-degree  { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--plum); margin-bottom: 0.3rem; }
+    .edu-field   { font-size: 0.85rem; color: var(--muted); }
+
+    .certs-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--plum); margin-bottom: 1.5rem; }
+
+    .certs-grid { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+
+    .cert-badge {
+      background: var(--plum);
+      color: var(--white);
+      padding: 1.2rem 1.8rem;
+      border-radius: 8px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.4rem;
+      min-width: 160px; text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cert-badge:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(37,13,56,0.22); }
+
+    .cert-badge .cert-label { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--mauve2); font-weight: 700; }
+    .cert-badge .cert-name  { font-size: 0.78rem; color: rgba(255,255,255,0.68); letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* ══════════════════════════════════════
+       CONTACTO
+    ══════════════════════════════════════ */
+    #contacto {
+      padding: 7rem 0;
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum2) 100%);
+      position: relative; overflow: hidden;
+    }
+
+    #contacto::before {
+      content: '';
+      position: absolute;
+      bottom: -20%; left: -10%;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(155,77,138,0.12) 0%, transparent 70%);
+    }
+
+    #contacto .section-title { color: var(--white); }
+    #contacto .section-label { color: var(--mauve2); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-intro { color: rgba(255,255,255,0.68); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+
+    .contact-items { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      color: rgba(255,255,255,0.75); font-size: 0.95rem;
+    }
+
+    .contact-item-icon {
+      width: 42px; height: 42px; min-width: 42px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .contact-item-icon svg { color: var(--mauve2); }
+
+    .contact-form {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+
+    .form-group { margin-bottom: 1.4rem; }
+
+    .form-group label {
+      display: block; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--rose);
+      background: rgba(255,255,255,0.09);
+    }
+
+    .form-group textarea { min-height: 130px; resize: vertical; }
+
+    .form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--rose), var(--plum3));
+      color: var(--white);
+      border: none;
+      padding: 1rem;
+      border-radius: 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 18px rgba(155,77,138,0.35);
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(155,77,138,0.5);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      background: #1e0a2e;
+      border: 1px solid var(--rose);
+      color: var(--mauve2);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 0.35s, opacity 0.35s;
+    }
+
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--plum);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .footer-name  { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
+    .footer-copy  { font-size: 0.78rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+
+    /* ── Scroll animations ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Mobile ── */
+    @media (max-width: 820px) {
+      .hamburger { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 70%; max-width: 300px;
+        height: 100vh;
+        background: var(--plum);
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1.8rem;
+        transition: right 0.35s;
+        z-index: 999;
+        box-shadow: -8px 0 40px rgba(0,0,0,0.45);
+      }
+
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1.1rem; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        gap: 3rem;
+      }
+
+      .hero-eyebrow { justify-content: center; }
+      .hero-tagline { text-align: center; }
+      .hero-meta    { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .hero-photo   { width: 220px; height: 220px; }
+
+      .about-grid, .contact-grid, .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-badge {
+        right: 50%; transform: translateX(50%);
+        bottom: -4rem;
+      }
+
+      .about-visual { padding-bottom: 5rem; }
+    }
+
+    @media (max-width: 500px) {
+      .achievements-grid { grid-template-columns: 1fr; }
+      .skills-grid       { grid-template-columns: 1fr; }
+      .certs-grid        { justify-content: center; }
+      .hero-photo        { width: 180px; height: 180px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">Ivonne <span>Sánchez</span></a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#logros">Logros</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: text -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span>Liderazgo Ejecutivo en Hospitalidad</span>
+          </div>
+
+          <h1 class="hero-name">Ivonne Sánchez Ramos</h1>
+          <p class="hero-title">Gerente General &nbsp;·&nbsp; Directora Hotelera &nbsp;·&nbsp; Estratega Corporativa</p>
+
+          <p class="hero-tagline">
+            Más de veinte años convirtiendo operaciones hoteleras en
+            <strong>historias de éxito medibles</strong>, con mano firme,
+            liderazgo humano y resultados que hablan por sí solos.
+          </p>
+
+          <div class="hero-meta">
+            <div class="hero-stat">
+              <span class="number">20+</span>
+              <span class="label">Años de experiencia</span>
+            </div>
+            <div class="hero-stat">
+              <span class="number">5</span>
+              <span class="label">Propiedades dirigidas</span>
+            </div>
+            <div class="hero-stat">
+              <span class="number">100%</span>
+              <span class="label">Ocupación alcanzada</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn-primary">Iniciar conversación</a>
+            <a href="#sobre-mi"  class="btn-outline">Conocer mi trayectoria</a>
+          </div>
+        </div>
+
+        <!-- Right: photo -->
+        <div class="hero-photo-wrap">
+          <img src="ivonne.jpg" alt="Ivonne Sánchez Ramos — Gerente General" class="hero-photo" />
+          <div class="hero-badge">
+            <span class="yrs">20+</span>
+            <span class="yrs-lbl">años de<br/>excelencia</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      <span>Explorar</span>
+    </div>
+  </section>
+
+  <!-- ═══════════ SOBRE MÍ ═══════════ -->
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual">
+          <div class="about-card">
+            <p class="about-card-quote">
+              "El verdadero liderazgo hotelero no reside únicamente en los números —
+              reside en la capacidad de inspirar equipos, superar expectativas de los
+              huéspedes y construir operaciones que perduran."
+            </p>
+            <div class="about-card-accent"></div>
+            <div class="about-badge">
+              <span class="years">20+</span>
+              <span class="years-label">años de<br/>excelencia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">Perfil ejecutivo</span>
+          <h2 class="section-title">Una líder que combina visión estratégica y calor humano</h2>
+          <div class="divider"></div>
+
+          <p>
+            A lo largo de más de dos décadas, he liderado con determinación operaciones hoteleras de
+            alto volumen en cadenas de reconocimiento internacional como <strong>Accor Hotels</strong>,
+            <strong>Grupo Vidanta</strong> y <strong>City Express</strong>. Mi trayectoria como Gerente
+            General abarca desde la planificación estratégica hasta la supervisión diaria en piso, con
+            un enfoque que nunca pierde de vista el factor más valioso de cualquier organización: las personas.
+          </p>
+          <p>
+            Creo profundamente en el liderazgo con propósito. Cada equipo que he guiado ha experimentado
+            un crecimiento tangible —en cultura, en desempeño y en resultados financieros— porque
+            un ambiente de trabajo sólido es la base de una operación hotelera extraordinaria.
+          </p>
+          <p>
+            Estoy preparada para aportar esta combinación única de experiencia ejecutiva, sensibilidad
+            humana y orientación a resultados a cualquier empresa que aspire a elevar su estándar.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Visión estratégica</strong>
+                <span>Diseño y ejecución de planes corporativos de alto impacto.</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Liderazgo centrado en las personas</strong>
+                <span>Formación de equipos comprometidos y culturas organizacionales sólidas.</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Orientación a resultados</strong>
+                <span>Métricas claras, metas superadas y premios de industria que lo certifican.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCIA ═══════════ -->
+  <section id="experiencia">
+    <div class="container">
+      <span class="section-label fade-in">Trayectoria directiva</span>
+      <h2 class="section-title fade-in">Experiencia como Gerente General</h2>
+      <div class="divider fade-in"></div>
+      <p class="section-intro fade-in">
+        Una carrera forjada en las principales cadenas hoteleras del país, con responsabilidad
+        total sobre operaciones, equipos y resultados financieros en cada propiedad.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-company">Accor Hotels — Ibis</div>
+            <h3 class="timeline-role">Gerente General · Ibis México Alameda</h3>
+            <p class="timeline-desc">
+              Dirección integral de la operación en una de las propiedades urbanas de mayor
+              demanda del corporativo Accor en México. Gestión de equipos multidisciplinarios,
+              control financiero y garantía de los estándares de calidad de la cadena internacional.
+            </p>
+            <span class="timeline-tag">Ciudad de México</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-company">Accor Hotels — Ibis</div>
+            <h3 class="timeline-role">Gerente General · Ibis Irapuato</h3>
+            <p class="timeline-desc">
+              Responsable de la operación completa de la propiedad, incluyendo la estrategia
+              comercial local, administración del presupuesto anual y supervisión del
+              desempeño en todas las áreas del hotel.
+            </p>
+            <span class="timeline-tag">Irapuato, Guanajuato</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-company">Grupo Vidanta</div>
+            <h3 class="timeline-role">Gerente General · Grupo Vidanta Mazatlán</h3>
+            <p class="timeline-desc">
+              Liderazgo del destino vacacional de lujo en el Pacífico Mexicano. Experiencia en
+              hospitalidad de nivel premium con enfoque en la satisfacción del huésped,
+              métricas de reputación y coordinación de operaciones de gran escala.
+            </p>
+            <span class="timeline-tag">Mazatlán, Sinaloa</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-company">City Express Hotels</div>
+            <h3 class="timeline-role">Gerente General · City Express Querétaro &amp; Celaya</h3>
+            <p class="timeline-desc">
+              Gestión simultánea y estratégica de dos propiedades de la cadena. Aquí se materializaron
+              los logros más notables: ocupación del 100% con clientes corporativos clave como Honda, y
+              el Premio al Mejor Crecimiento Comercial a nivel nacional.
+            </p>
+            <span class="timeline-tag">Querétaro &amp; Celaya</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LOGROS ═══════════ -->
+  <section id="logros">
+    <div class="container">
+      <span class="section-label fade-in">Resultados comprobados</span>
+      <h2 class="section-title fade-in">Logros que definen una carrera</h2>
+      <div class="divider fade-in"></div>
+      <p class="section-intro fade-in">
+        Cada número representa decisiones estratégicas, equipos motivados y una
+        ejecución impecable sostenida a lo largo de dos décadas.
+      </p>
+
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="achievement-metric">+15%</div>
+          <h3 class="achievement-title">Incremento en Tarifa Promedio (ADR)</h3>
+          <p class="achievement-desc">Estrategias de revenue management que elevaron el valor percibido de la propiedad sin sacrificar la ocupación.</p>
+        </div>
+
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="achievement-metric">Premio</div>
+          <h3 class="achievement-title">Reputation Performance Score</h3>
+          <p class="achievement-desc">Reconocimiento por la reducción del 15% en quejas de huéspedes mediante protocolos de atención mejorados.</p>
+        </div>
+
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="achievement-metric">1er Lugar</div>
+          <h3 class="achievement-title">Mejor Crecimiento Comercial a Nivel Cadena</h3>
+          <p class="achievement-desc">Premio nacional que culminó en ocupación del 100% con clientes corporativos clave como <strong style="color: rgba(255,255,255,0.8)">Honda</strong>.</p>
+        </div>
+
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="achievement-metric">-15%</div>
+          <h3 class="achievement-title">Reducción de Quejas de Huéspedes</h3>
+          <p class="achievement-desc">Disminución sostenida impulsada por cultura de servicio orientada a la excelencia y protocolos de calidad.</p>
+        </div>
+
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="achievement-metric">5+</div>
+          <h3 class="achievement-title">Propiedades Dirigidas con Éxito</h3>
+          <p class="achievement-desc">Liderazgo comprobado en múltiples formatos: urbano, corporativo y destino vacacional, con resultados positivos en cada transición.</p>
+        </div>
+
+        <div class="achievement-card fade-in">
+          <div class="achievement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="achievement-metric">100%</div>
+          <h3 class="achievement-title">Ocupación Máxima con Clientes Corporativos</h3>
+          <p class="achievement-desc">Alcanzada mediante alianzas estratégicas consolidando al hotel como proveedor preferente del sector industrial y automotriz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ HABILIDADES ═══════════ -->
+  <section id="habilidades">
+    <div class="container">
+      <span class="section-label fade-in">Competencias directivas</span>
+      <h2 class="section-title fade-in">Habilidades Operativas y de Liderazgo</h2>
+      <div class="divider fade-in"></div>
+      <p class="section-intro fade-in">
+        Un conjunto de capacidades desarrolladas en el campo durante más de dos décadas
+        de dirección hotelera en entornos exigentes y de alto rendimiento.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="skill-title">Gestión y Logística Hotelera</h3>
+          <p class="skill-desc">Responsable de la logística y organización diaria de múltiples hoteles, incluyendo planeación, control y supervisión en piso de todas las actividades cotidianas.</p>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="skill-title">Estrategia Corporativa y Comercial</h3>
+          <p class="skill-desc">Diseño e implementación de estrategias organizacionales y planes de ventas de alto impacto, con análisis detallado de reportes de ingresos para decisiones basadas en datos.</p>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="skill-title">Liderazgo y Gestión de Equipos</h3>
+          <p class="skill-desc">Amplia capacidad para guiar y motivar al staff hotelero, con experiencia presidiendo reuniones del Comité Ejecutivo a nivel regional.</p>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="skill-title">Gestión Financiera</h3>
+          <p class="skill-desc">Elaboración de presupuestos anuales y optimización de recursos en banquetes, habitaciones y nómina. Control del P&amp;L con enfoque en rentabilidad sostenible.</p>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <h3 class="skill-title">Optimización de Procesos</h3>
+          <p class="skill-desc">Implementación de mejoras en revisión de habitaciones mediante sistemas digitales, controles de inventarios y seguimiento de protocolos para garantizar eficiencia operativa.</p>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="skill-title">Relaciones Públicas y Eventos Corporativos</h3>
+          <p class="skill-desc">Cotización y organización logística de eventos corporativos, sesiones de trabajo y Team Building, en coordinación con proveedores y prestadores de servicios locales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FORMACIÓN ═══════════ -->
+  <section id="formacion">
+    <div class="container">
+      <span class="section-label fade-in">Credenciales académicas y profesionales</span>
+      <h2 class="section-title fade-in">Formación y Certificaciones</h2>
+      <div class="divider fade-in"></div>
+
+      <div class="education-grid fade-in">
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3 class="edu-degree">Licenciatura en Administración de Empresas</h3>
+            <p class="edu-field">Gestión organizacional, finanzas y estrategia corporativa</p>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3 class="edu-degree">Licenciatura en Periodismo</h3>
+            <p class="edu-field">Comunicación estratégica, narrativa y relaciones públicas</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="certs-title fade-in">Certificaciones de Calidad Internacional</h3>
+      <div class="certs-grid fade-in">
+        <div class="cert-badge">
+          <span class="cert-label">"M"</span>
+          <span class="cert-name">Quality Label<br/>Accor Hotels</span>
+        </div>
+        <div class="cert-badge">
+          <span class="cert-label">"H"</span>
+          <span class="cert-name">Quality Label<br/>Accor Hotels</span>
+        </div>
+        <div class="cert-badge" style="background: var(--plum2); border: 1px solid rgba(212,168,203,0.35);">
+          <span class="cert-label" style="font-size:1.2rem; color:var(--mauve2)">RPS</span>
+          <span class="cert-name">Reputation<br/>Performance Score</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACTO ═══════════ -->
+  <section id="contacto">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <span class="section-label">Conectemos</span>
+        <h2 class="section-title" style="color:var(--white)">¿Lista para llevar su hotel al siguiente nivel?</h2>
+        <div class="divider" style="margin:0 auto 1rem;"></div>
+        <p style="color:rgba(255,255,255,0.58); max-width:540px; margin:0 auto; font-size:1rem; line-height:1.7;">
+          Si busca una directora con trayectoria comprobada, visión estratégica y la experiencia
+          para transformar operaciones hoteleras en resultados extraordinarios, hagamos de esa
+          conversación el primer paso.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <span>correo@ivonnesanchez.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.1 6.1l.73-.73a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>+52 (55) 0000 0000</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <span>LinkedIn: Ivonne Sánchez Ramos</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span>México</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" placeholder="Su nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa / Organización</label>
+              <input type="text" id="empresa" placeholder="Su empresa" />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" placeholder="su@correo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" placeholder="Cuénteme sobre la oportunidad o proyecto..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="container">
+      <p class="footer-name">Ivonne Sánchez Ramos</p>
+      <p class="footer-copy">© 2026 · Directora Hotelera &amp; Estratega Corporativa · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">✓ Mensaje enviado. Me pondré en contacto pronto.</div>
+
+  <!-- ═══════════ JS ═══════════ -->
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }));
+
+    // Intersection observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in, .timeline-item').forEach(el => observer.observe(el));
+
+    // Stagger delays
+    document.querySelectorAll('.timeline-item').forEach((el, i) => el.style.transitionDelay = `${i * 0.12}s`);
+    document.querySelectorAll('.achievement-card.fade-in, .skill-card.fade-in').forEach((el, i) => el.style.transitionDelay = `${(i % 3) * 0.1}s`);
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      this.reset();
+      setTimeout(() => t.classList.remove('show'), 4000);
+    });
+
+    // Active nav highlight
+    const sections   = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAnchors.forEach(a => a.style.color = '');
+          const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (active && !active.classList.contains('nav-cta')) active.style.color = 'var(--mauve2)';
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => sObs.observe(s));
+  </script>
+
+</body>
+</html>
