@@ -1014,6 +1014,47 @@
       max-width: 380px;
     }
 
+    /* ── Network strip ── */
+    .network-strip {
+      background: var(--plum);
+      border-top: 1px solid rgba(212,168,203,0.1);
+      padding: 1.6rem 0;
+    }
+
+    .network-inner {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .network-intro {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .network-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .network-tags li {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(212,168,203,0.5);
+      padding: 0.22rem 0.75rem;
+      border: 1px solid rgba(212,168,203,0.15);
+      border-radius: 20px;
+    }
+
     /* ── Footer ── */
     footer {
       background: var(--plum);
@@ -1633,6 +1674,21 @@
       <p class="cierre-quote">"Liderazgo con propósito, resultados con constancia."</p>
     </div>
   </section>
+
+  <!-- ═══════════ NETWORK ═══════════ -->
+  <div class="network-strip">
+    <div class="container network-inner">
+      <p class="network-intro">Respaldada por un network de profesionales especializados en</p>
+      <ul class="network-tags">
+        <li>Agentes de Ventas</li>
+        <li>Viajes</li>
+        <li>Inmobiliaria</li>
+        <li>Seguros</li>
+        <li>Marketing</li>
+        <li>Diseño</li>
+      </ul>
+    </div>
+  </div>
 
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
