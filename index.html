@@ -21,6 +21,13 @@
       background: var(--plum);
       border-bottom: 1px solid rgba(212,168,203,0.15);
       padding: 0.38rem 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .topbar.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
     }
 
     .topbar-inner {
@@ -123,7 +130,7 @@
     /* ── Navigation ── */
     nav {
       position: fixed;
-      top: 30px; left: 0; right: 0;
+      top: 30px; left: 0; right: 0; /* JS overrides this dynamically */
       z-index: 1000;
       padding: 1rem 0;
       transition: background 0.35s, box-shadow 0.35s, padding 0.35s;
@@ -1025,8 +1032,8 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
+        <li><a href="#experiencia">Trayectoria</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#logros">Logros</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#formacion">Formación</a></li>
@@ -1072,7 +1079,7 @@
 
           <div class="hero-actions">
             <a href="#contacto" class="btn-primary">Iniciar conversación</a>
-            <a href="#sobre-mi"  class="btn-outline">Conocer mi trayectoria</a>
+            <a href="#experiencia" class="btn-outline">Ver trayectoria</a>
           </div>
         </div>
 
@@ -1091,83 +1098,6 @@
     <div class="hero-scroll">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       <span>Explorar</span>
-    </div>
-  </section>
-
-  <!-- ═══════════ SOBRE MÍ ═══════════ -->
-  <section id="sobre-mi">
-    <div class="container">
-      <div class="about-grid">
-
-        <div class="about-visual">
-          <div class="about-card">
-            <p class="about-card-quote">
-              "El verdadero liderazgo hotelero no reside únicamente en los números —
-              reside en la capacidad de inspirar equipos, superar expectativas de los
-              huéspedes y construir operaciones que perduran."
-            </p>
-            <div class="about-card-accent"></div>
-            <div class="about-badge">
-              <span class="years">20+</span>
-              <span class="years-label">años de<br/>excelencia</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-text">
-          <span class="section-label">Perfil ejecutivo</span>
-          <h2 class="section-title">Una líder que combina visión estratégica y calor humano</h2>
-          <div class="divider"></div>
-
-          <p>
-            A lo largo de más de dos décadas, he liderado con determinación operaciones hoteleras de
-            alto volumen en cadenas de reconocimiento internacional como <strong>Accor Hotels</strong>,
-            <strong>Grupo Vidanta</strong> y <strong>City Express</strong>. Mi trayectoria como Gerente
-            General abarca desde la planificación estratégica hasta la supervisión diaria en piso, con
-            un enfoque que nunca pierde de vista el factor más valioso de cualquier organización: las personas.
-          </p>
-          <p>
-            Creo profundamente en el liderazgo con propósito. Cada equipo que he guiado ha experimentado
-            un crecimiento tangible —en cultura, en desempeño y en resultados financieros— porque
-            un ambiente de trabajo sólido es la base de una operación hotelera extraordinaria.
-          </p>
-          <p>
-            Estoy preparada para aportar esta combinación única de experiencia ejecutiva, sensibilidad
-            humana y orientación a resultados a cualquier empresa que aspire a elevar su estándar.
-          </p>
-
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="pillar-text">
-                <strong>Visión estratégica</strong>
-                <span>Diseño y ejecución de planes corporativos de alto impacto.</span>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="pillar-text">
-                <strong>Liderazgo centrado en las personas</strong>
-                <span>Formación de equipos comprometidos y culturas organizacionales sólidas.</span>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              </div>
-              <div class="pillar-text">
-                <strong>Orientación a resultados</strong>
-                <span>Métricas claras, metas superadas y premios de industria que lo certifican.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -1269,6 +1199,83 @@
               y de servicio al huésped de la cadena internacional Quality Inn.
             </p>
             <span class="timeline-tag">Morelia, Michoacán</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SOBRE MÍ ═══════════ -->
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual">
+          <div class="about-card">
+            <p class="about-card-quote">
+              "El verdadero liderazgo hotelero no reside únicamente en los números —
+              reside en la capacidad de inspirar equipos, superar expectativas de los
+              huéspedes y construir operaciones que perduran."
+            </p>
+            <div class="about-card-accent"></div>
+            <div class="about-badge">
+              <span class="years">20+</span>
+              <span class="years-label">años de<br/>excelencia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">Perfil ejecutivo</span>
+          <h2 class="section-title">Una líder que combina visión estratégica y calor humano</h2>
+          <div class="divider"></div>
+
+          <p>
+            A lo largo de más de dos décadas, he liderado con determinación operaciones hoteleras de
+            alto volumen en cadenas de reconocimiento internacional como <strong>Accor Hotels</strong>,
+            <strong>Grupo Vidanta</strong> y <strong>City Express</strong>. Mi trayectoria como Gerente
+            General abarca desde la planificación estratégica hasta la supervisión diaria en piso, con
+            un enfoque que nunca pierde de vista el factor más valioso de cualquier organización: las personas.
+          </p>
+          <p>
+            Creo profundamente en el liderazgo con propósito. Cada equipo que he guiado ha experimentado
+            un crecimiento tangible —en cultura, en desempeño y en resultados financieros— porque
+            un ambiente de trabajo sólido es la base de una operación hotelera extraordinaria.
+          </p>
+          <p>
+            Estoy preparada para aportar esta combinación única de experiencia ejecutiva, sensibilidad
+            humana y orientación a resultados a cualquier empresa que aspire a elevar su estándar.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Visión estratégica</strong>
+                <span>Diseño y ejecución de planes corporativos de alto impacto.</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Liderazgo centrado en las personas</strong>
+                <span>Formación de equipos comprometidos y culturas organizacionales sólidas.</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Orientación a resultados</strong>
+                <span>Métricas claras, metas superadas y premios de industria que lo certifican.</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1548,12 +1555,18 @@
 
   <!-- ═══════════ JS ═══════════ -->
   <script>
-    // Navbar scroll — stays below topbar (30px)
-    const navbar = document.getElementById('navbar');
+    // Navbar + topbar scroll behaviour — no overlap
+    const navbar  = document.getElementById('navbar');
+    const topbar  = document.querySelector('.topbar');
+    const TOPBAR_H = topbar.offsetHeight;
+
     window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 60;
+      const scrolled = window.scrollY > TOPBAR_H;
+      // topbar slides away
+      topbar.classList.toggle('hidden', scrolled);
+      // nav drops to top:0 only after topbar is gone
+      navbar.style.top    = scrolled ? '0' : TOPBAR_H + 'px';
       navbar.classList.toggle('scrolled', scrolled);
-      navbar.style.top = scrolled ? '0' : '30px';
     });
 
     // Hamburger
