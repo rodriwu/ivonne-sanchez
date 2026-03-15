@@ -1184,7 +1184,8 @@
 
   <!-- ═══════════ HERO ═══════════ -->
   <section id="hero">
-    <div class="container">
+    <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.55;z-index:0;"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
       <div class="hero-inner">
 
         <!-- Left: text -->
@@ -1780,6 +1781,122 @@
       });
     }, { threshold: 0.4 });
     sections.forEach(s => sObs.observe(s));
+
+    // ── Hero circuit animation ──
+    (function() {
+      const canvas = document.getElementById('heroCanvas');
+      const ctx    = canvas.getContext('2d');
+      const C1 = 'rgba(212,168,203,', C2 = 'rgba(155,77,138,', C3 = 'rgba(232,180,210,';
+
+      function resize() {
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      // Build circuit nodes & paths
+      const NODE_COUNT = 18;
+      const nodes = [];
+      function makeNodes() {
+        nodes.length = 0;
+        for (let i = 0; i < NODE_COUNT; i++) {
+          nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 2.5 + 1,
+            phase: Math.random() * Math.PI * 2,
+            speed: Math.random() * 0.008 + 0.004,
+            color: [C1, C2, C3][Math.floor(Math.random() * 3)]
+          });
+        }
+      }
+      makeNodes();
+      window.addEventListener('resize', makeNodes);
+
+      // Pulses travelling along edges
+      const pulses = [];
+      function spawnPulse() {
+        if (nodes.length < 2) return;
+        const a = nodes[Math.floor(Math.random() * nodes.length)];
+        const b = nodes[Math.floor(Math.random() * nodes.length)];
+        if (a === b) return;
+        pulses.push({ a, b, t: 0, speed: Math.random() * 0.006 + 0.003,
+          color: [C1, C2, C3][Math.floor(Math.random() * 3)] });
+      }
+      setInterval(spawnPulse, 600);
+
+      let raf;
+      function draw(ts) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw edges between nearby nodes
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 220) {
+              const alpha = (1 - dist / 220) * 0.18;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              // right-angle circuit path
+              ctx.lineTo(nodes[i].x, nodes[j].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = `rgba(212,168,203,${alpha})`;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw pulses
+        for (let i = pulses.length - 1; i >= 0; i--) {
+          const p = pulses[i];
+          p.t += p.speed;
+          if (p.t >= 1) { pulses.splice(i, 1); continue; }
+          // follow the same right-angle path
+          const mx = p.a.x, my = p.b.y;
+          let px, py;
+          const half = 0.5;
+          if (p.t < half) {
+            const tt = p.t / half;
+            px = p.a.x + (mx - p.a.x) * tt;
+            py = p.a.y + (my - p.a.y) * tt;
+          } else {
+            const tt = (p.t - half) / half;
+            px = mx + (p.b.x - mx) * tt;
+            py = my + (p.b.y - my) * tt;
+          }
+          const grd = ctx.createRadialGradient(px, py, 0, px, py, 5);
+          grd.addColorStop(0, p.color + '0.9)');
+          grd.addColorStop(1, p.color + '0)');
+          ctx.beginPath();
+          ctx.arc(px, py, 5, 0, Math.PI * 2);
+          ctx.fillStyle = grd;
+          ctx.fill();
+        }
+
+        // Draw nodes
+        nodes.forEach(n => {
+          const alpha = 0.35 + 0.35 * Math.sin(ts * 0.001 * n.speed * 200 + n.phase);
+          const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 3);
+          grd.addColorStop(0, n.color + alpha + ')');
+          grd.addColorStop(1, n.color + '0)');
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r * 3, 0, Math.PI * 2);
+          ctx.fillStyle = grd;
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = n.color + (alpha * 1.5) + ')';
+          ctx.fill();
+        });
+
+        raf = requestAnimationFrame(draw);
+      }
+      raf = requestAnimationFrame(draw);
+    })();
   </script>
 
 </body>
