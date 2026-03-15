@@ -1636,22 +1636,24 @@
         </div>
 
         <div class="contact-form">
-          <form id="contactForm" action="mailto:ivosanra@gmail.com,rodriwuu@gmail.com" method="POST" enctype="text/plain">
+          <form id="contactForm">
+            <input type="hidden" name="access_key" value="f7f7ac7e-3e8c-467b-9d50-e2becd98abfb" />
+            <input type="hidden" name="subject" value="Nuevo mensaje desde ivosanra.com" />
             <div class="form-group">
               <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" placeholder="Su nombre" required />
+              <input type="text" id="nombre" name="name" placeholder="Su nombre" required />
             </div>
             <div class="form-group">
               <label for="empresa">Empresa / Organización</label>
-              <input type="text" id="empresa" placeholder="Su empresa" />
+              <input type="text" id="empresa" name="empresa" placeholder="Su empresa" />
             </div>
             <div class="form-group">
               <label for="email">Correo electrónico</label>
-              <input type="email" id="email" placeholder="su@correo.com" required />
+              <input type="email" id="email" name="email" placeholder="su@correo.com" required />
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" placeholder="Cuénteme sobre la oportunidad o proyecto..." required></textarea>
+              <textarea id="mensaje" name="message" placeholder="Cuénteme sobre la oportunidad o proyecto..." required></textarea>
             </div>
             <button type="submit" class="form-submit">Enviar mensaje</button>
           </form>
@@ -1741,11 +1743,27 @@
     document.querySelectorAll('.achievement-card.fade-in, .skill-card.fade-in').forEach((el, i) => el.style.transitionDelay = `${(i % 3) * 0.1}s`);
 
     // Contact form
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      const data = Object.fromEntries(new FormData(this));
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
       const t = document.getElementById('toast');
+      if (res.ok) {
+        t.textContent = '✓ Mensaje enviado. Me pondré en contacto pronto.';
+        this.reset();
+      } else {
+        t.textContent = '✗ Hubo un error. Por favor intente de nuevo.';
+      }
       t.classList.add('show');
-      this.reset();
+      btn.disabled = false;
+      btn.textContent = 'Enviar mensaje';
       setTimeout(() => t.classList.remove('show'), 4000);
     });
 
