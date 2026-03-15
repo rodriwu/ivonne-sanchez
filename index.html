@@ -1129,6 +1129,12 @@
       .about-visual { padding-bottom: 5rem; }
     }
 
+    @media (max-width: 820px) {
+      .timeline::before { display: none; }
+      .timeline { padding-left: 0; }
+      .timeline-dot { display: none; }
+    }
+
     @media (max-width: 500px) {
       .achievements-grid { grid-template-columns: 1fr; }
       .skills-grid       { grid-template-columns: 1fr; }
