@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <style>
     /* ── Reset & Base ── */
@@ -1225,26 +1226,22 @@
         <!-- Left: text -->
         <div class="hero-content">
           <div class="hero-eyebrow">
-            <span class="editable">Liderazgo Ejecutivo en Hospitalidad</span>
+            <span class="editable">{{hero.eyebrow}}</span>
           </div>
 
-          <h1 class="hero-name editable">Ivonne Sánchez R.</h1>
-          <p class="hero-title editable">Gerente General &nbsp;·&nbsp; Directora Hotelera &nbsp;·&nbsp; Estratega Corporativa</p>
+          <h1 class="hero-name editable">{{hero.name}}</h1>
+          <p class="hero-title editable">{{hero.title}}</p>
 
-          <p class="hero-tagline editable">
-            Más de veinte años convirtiendo operaciones hoteleras en
-            <strong>historias de éxito medibles</strong>, con mano firme,
-            liderazgo humano y resultados que hablan por sí solos.
-          </p>
+          <p class="hero-tagline editable">{{{hero.tagline}}}</p>
 
           <div class="hero-meta">
             <div class="hero-stat">
-              <span class="number editable">20+</span>
-              <span class="label editable">Años de experiencia</span>
+              <span class="number editable">{{hero.stat1_number}}</span>
+              <span class="label editable">{{hero.stat1_label}}</span>
             </div>
             <div class="hero-stat">
-              <span class="number editable">5</span>
-              <span class="label editable">Propiedades dirigidas</span>
+              <span class="number editable">{{hero.stat2_number}}</span>
+              <span class="label editable">{{hero.stat2_label}}</span>
             </div>
           </div>
 
@@ -1288,87 +1285,60 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">Accor Hotels — Ibis &nbsp;·&nbsp; Sept 2025 – A la fecha</div>
-            <h3 class="timeline-role editable">Gerente General · Ibis México Alameda</h3>
-            <p class="timeline-desc editable">
-              Responsable de la logística diaria y supervisión de todas las actividades del hotel.
-              Diseño de estrategias y tácticas organizacionales, cambio de procesos en revisión
-              de habitaciones mediante sistema propio, controles de inventarios y cotización de
-              eventos corporativos con proveedores locales (Team Building, sesiones de trabajo).
-            </p>
-            <span class="timeline-tag editable">Ciudad de México</span>
+            <div class="timeline-company editable">{{exp1.company}}</div>
+            <h3 class="timeline-role editable">{{exp1.role}}</h3>
+            <p class="timeline-desc editable">{{exp1.desc}}</p>
+            <span class="timeline-tag editable">{{exp1.tag}}</span>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">Accor Hotels — Ibis &nbsp;·&nbsp; Agosto 2023 – 2025</div>
-            <h3 class="timeline-role editable">Gerente General · Hotel Ibis Irapuato</h3>
-            <p class="timeline-desc editable">
-              Organización y logística diaria del hotel, estrategias en área de Ventas, supervisión
-              operativa y elaboración de presupuesto anual. Logros: incremento en tarifa promedio
-              del 15%, captación de nuevos clientes, actualización de equipos de Recepción
-              (PC, sistemas Vision, Ópera) y rehabilitación de A.A. y elevadores.
-            </p>
-            <span class="timeline-tag editable">Irapuato, Guanajuato</span>
+            <div class="timeline-company editable">{{exp2.company}}</div>
+            <h3 class="timeline-role editable">{{exp2.role}}</h3>
+            <p class="timeline-desc editable">{{exp2.desc}}</p>
+            <span class="timeline-tag editable">{{exp2.tag}}</span>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">Grupo Vidanta &nbsp;·&nbsp; 2019 – 2020</div>
-            <h3 class="timeline-role editable">Gerente General / Residente · Mayan Palace Mazatlán</h3>
-            <p class="timeline-desc editable">
-              Responsable de la logística diaria del hotel, informes de ingreso, ventas y
-              presupuestos. Apoyo operativo, guía y motivación del staff hotelero. Optimización
-              de presupuestos en banquetes, habitaciones y personal, con seguimiento
-              minucioso de los protocolos establecidos.
-            </p>
-            <span class="timeline-tag editable">Mazatlán, Sinaloa</span>
+            <div class="timeline-company editable">{{exp3.company}}</div>
+            <h3 class="timeline-role editable">{{exp3.role}}</h3>
+            <p class="timeline-desc editable">{{exp3.desc}}</p>
+            <span class="timeline-tag editable">{{exp3.tag}}</span>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">Accor Hotels — Ibis &nbsp;·&nbsp; 2015 – 2019</div>
-            <h3 class="timeline-role editable">Gerente General · Hotel Ibis México Perinorte</h3>
-            <p class="timeline-desc editable">
-              Logística y supervisión diaria, estrategias organizacionales y presidencia de las
-              reuniones del Comité Ejecutivo para gerentes regionales de Accor. Premio
-              <em>Reputation Performance Score</em> por reducción del 15% en quejas de huéspedes.
-              Visitas a cuentas top ten y organización de eventos en el Estado de México.
-            </p>
-            <span class="timeline-tag editable">Estado de México</span>
+            <div class="timeline-company editable">{{exp4.company}}</div>
+            <h3 class="timeline-role editable">{{exp4.role}}</h3>
+            <p class="timeline-desc editable">{{exp4.desc}}</p>
+            <span class="timeline-tag editable">{{exp4.tag}}</span>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">City Express Hotels &nbsp;·&nbsp; 2012 – 2014</div>
-            <h3 class="timeline-role editable">Gerente General · City Express Querétaro &amp; Celaya</h3>
-            <p class="timeline-desc editable">
-              Planeación, organización, control y supervisión en piso. Análisis de reportes de
-              ingreso y ventas. Premio al Mejor Crecimiento Comercial a nivel cadena (2013) por
-              captación de Honda, Yorosu y Yutaka en la zona del Bajío.
-            </p>
-            <span class="timeline-tag editable">Querétaro &amp; Celaya, Qro.</span>
+            <div class="timeline-company editable">{{exp5.company}}</div>
+            <h3 class="timeline-role editable">{{exp5.role}}</h3>
+            <p class="timeline-desc editable">{{exp5.desc}}</p>
+            <span class="timeline-tag editable">{{exp5.tag}}</span>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-company editable">Quality Inn &nbsp;·&nbsp; 2010 – 2012</div>
-            <h3 class="timeline-role editable">Gerente General · Quality Inn Horizon</h3>
-            <p class="timeline-desc editable">
-              Dirección integral de la propiedad, garantizando los estándares operativos
-              y de servicio al huésped de la cadena internacional Quality Inn.
-            </p>
-            <span class="timeline-tag editable">Morelia, Michoacán</span>
+            <div class="timeline-company editable">{{exp6.company}}</div>
+            <h3 class="timeline-role editable">{{exp6.role}}</h3>
+            <p class="timeline-desc editable">{{exp6.desc}}</p>
+            <span class="timeline-tag editable">{{exp6.tag}}</span>
           </div>
         </div>
 
@@ -1383,11 +1353,7 @@
 
         <div class="about-visual">
           <div class="about-card">
-            <p class="about-card-quote editable">
-              "El verdadero liderazgo hotelero no reside únicamente en los números —
-              reside en la capacidad de inspirar equipos, superar expectativas de los
-              huéspedes y construir operaciones que perduran."
-            </p>
+            <p class="about-card-quote editable">{{about.quote}}</p>
             <div class="about-card-accent"></div>
             <div class="about-badge">
               <span class="years">20+</span>
@@ -1401,22 +1367,9 @@
           <h2 class="section-title">Una líder que combina visión estratégica y calor humano</h2>
           <div class="divider"></div>
 
-          <p class="editable">
-            A lo largo de más de dos décadas, he liderado con determinación operaciones hoteleras de
-            alto volumen en cadenas de reconocimiento internacional como <strong>Accor Hotels</strong>,
-            <strong>Grupo Vidanta</strong> y <strong>City Express</strong>. Mi trayectoria como Gerente
-            General abarca desde la planificación estratégica hasta la supervisión diaria en piso, con
-            un enfoque que nunca pierde de vista el factor más valioso de cualquier organización: las personas.
-          </p>
-          <p class="editable">
-            Creo profundamente en el liderazgo con propósito. Cada equipo que he guiado ha experimentado
-            un crecimiento tangible —en cultura, en desempeño y en resultados financieros— porque
-            un ambiente de trabajo sólido es la base de una operación hotelera extraordinaria.
-          </p>
-          <p class="editable">
-            Estoy preparada para aportar esta combinación única de experiencia ejecutiva, sensibilidad
-            humana y orientación a resultados a cualquier empresa que aspire a elevar su estándar.
-          </p>
+          <p class="editable">{{{about.p1}}}</p>
+          <p class="editable">{{about.p2}}</p>
+          <p class="editable">{{about.p3}}</p>
 
           <div class="about-pillars">
             <div class="pillar">
@@ -1424,8 +1377,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
               <div class="pillar-text">
-                <strong class="editable">Visión estratégica</strong>
-                <span class="editable">Diseño y ejecución de planes corporativos de alto impacto.</span>
+                <strong class="editable">{{about.pillar1_title}}</strong>
+                <span class="editable">{{about.pillar1_desc}}</span>
               </div>
             </div>
             <div class="pillar">
@@ -1433,8 +1386,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <div class="pillar-text">
-                <strong class="editable">Liderazgo centrado en las personas</strong>
-                <span class="editable">Formación de equipos comprometidos y culturas organizacionales sólidas.</span>
+                <strong class="editable">{{about.pillar2_title}}</strong>
+                <span class="editable">{{about.pillar2_desc}}</span>
               </div>
             </div>
             <div class="pillar">
@@ -1442,8 +1395,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
               </div>
               <div class="pillar-text">
-                <strong class="editable">Orientación a resultados</strong>
-                <span class="editable">Métricas claras, metas superadas y premios de industria que lo certifican.</span>
+                <strong class="editable">{{about.pillar3_title}}</strong>
+                <span class="editable">{{about.pillar3_desc}}</span>
               </div>
             </div>
           </div>
@@ -1469,9 +1422,9 @@
           <div class="achievement-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
-          <div class="achievement-metric editable">+15%</div>
-          <h3 class="achievement-title editable">Incremento en Tarifa Promedio (ADR)</h3>
-          <p class="achievement-desc editable">Estrategias de revenue management que elevaron el valor percibido de la propiedad sin sacrificar la ocupación.</p>
+          <div class="achievement-metric editable">{{ach1.metric}}</div>
+          <h3 class="achievement-title editable">{{ach1.title}}</h3>
+          <p class="achievement-desc editable">{{ach1.desc}}</p>
           <span class="achievement-hotel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hotel Ibis Irapuato</span>
         </div>
 
@@ -1479,9 +1432,9 @@
           <div class="achievement-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
-          <div class="achievement-metric editable">Premio</div>
-          <h3 class="achievement-title editable">Reputation Performance Score</h3>
-          <p class="achievement-desc editable">Reconocimiento por la reducción del 15% en quejas de huéspedes mediante protocolos de atención mejorados.</p>
+          <div class="achievement-metric editable">{{ach2.metric}}</div>
+          <h3 class="achievement-title editable">{{ach2.title}}</h3>
+          <p class="achievement-desc editable">{{ach2.desc}}</p>
           <span class="achievement-hotel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hotel Ibis México Perinorte</span>
         </div>
 
@@ -1489,9 +1442,9 @@
           <div class="achievement-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <div class="achievement-metric editable">1er Lugar</div>
-          <h3 class="achievement-title editable">Mejor Crecimiento Comercial a Nivel Cadena</h3>
-          <p class="achievement-desc editable">Premio nacional por el mejor desarrollo, atención y captación de clientes corporativos clave como <strong style="color: rgba(255,255,255,0.8)">Honda</strong>, Yorosu y Yutaka en la zona del Bajío.</p>
+          <div class="achievement-metric editable">{{ach3.metric}}</div>
+          <h3 class="achievement-title editable">{{ach3.title}}</h3>
+          <p class="achievement-desc editable">{{ach3.desc}}</p>
           <span class="achievement-hotel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>City Express Celaya</span>
         </div>
 
@@ -1499,9 +1452,9 @@
           <div class="achievement-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
-          <div class="achievement-metric editable">-15%</div>
-          <h3 class="achievement-title editable">Reducción de Quejas de Huéspedes</h3>
-          <p class="achievement-desc editable">Disminución sostenida impulsada por cultura de servicio orientada a la excelencia y protocolos de calidad.</p>
+          <div class="achievement-metric editable">{{ach4.metric}}</div>
+          <h3 class="achievement-title editable">{{ach4.title}}</h3>
+          <p class="achievement-desc editable">{{ach4.desc}}</p>
           <span class="achievement-hotel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hotel Ibis México Perinorte</span>
         </div>
 
@@ -1509,9 +1462,9 @@
           <div class="achievement-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
-          <div class="achievement-metric editable">5+</div>
-          <h3 class="achievement-title editable">Propiedades Dirigidas con Éxito</h3>
-          <p class="achievement-desc editable">Liderazgo comprobado en múltiples formatos: urbano, corporativo y destino vacacional, con resultados positivos en cada transición.</p>
+          <div class="achievement-metric editable">{{ach5.metric}}</div>
+          <h3 class="achievement-title editable">{{ach5.title}}</h3>
+          <p class="achievement-desc editable">{{ach5.desc}}</p>
           <span class="achievement-hotel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Accor · Vidanta · City Express · Quality Inn</span>
         </div>
 
@@ -1535,48 +1488,48 @@
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h3 class="skill-title editable">Gestión y Logística Hotelera</h3>
-          <p class="skill-desc editable">Responsable de la logística y organización diaria de múltiples hoteles, incluyendo planeación, control y supervisión en piso de todas las actividades cotidianas.</p>
+          <h3 class="skill-title editable">{{skill1.title}}</h3>
+          <p class="skill-desc editable">{{skill1.desc}}</p>
         </div>
 
         <div class="skill-card fade-in">
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <h3 class="skill-title editable">Estrategia Corporativa y Comercial</h3>
-          <p class="skill-desc editable">Diseño e implementación de estrategias organizacionales y planes de ventas de alto impacto, con análisis detallado de reportes de ingresos para decisiones basadas en datos.</p>
+          <h3 class="skill-title editable">{{skill2.title}}</h3>
+          <p class="skill-desc editable">{{skill2.desc}}</p>
         </div>
 
         <div class="skill-card fade-in">
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="skill-title editable">Liderazgo y Gestión de Equipos</h3>
-          <p class="skill-desc editable">Amplia capacidad para guiar y motivar al staff hotelero, con experiencia presidiendo reuniones del Comité Ejecutivo a nivel regional.</p>
+          <h3 class="skill-title editable">{{skill3.title}}</h3>
+          <p class="skill-desc editable">{{skill3.desc}}</p>
         </div>
 
         <div class="skill-card fade-in">
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3 class="skill-title editable">Gestión Financiera</h3>
-          <p class="skill-desc editable">Elaboración de presupuestos anuales y optimización de recursos en banquetes, habitaciones y nómina. Control del P&amp;L con enfoque en rentabilidad sostenible.</p>
+          <h3 class="skill-title editable">{{skill4.title}}</h3>
+          <p class="skill-desc editable">{{skill4.desc}}</p>
         </div>
 
         <div class="skill-card fade-in">
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           </div>
-          <h3 class="skill-title editable">Optimización de Procesos</h3>
-          <p class="skill-desc editable">Implementación de mejoras en revisión de habitaciones mediante sistemas digitales, controles de inventarios y seguimiento de protocolos para garantizar eficiencia operativa.</p>
+          <h3 class="skill-title editable">{{skill5.title}}</h3>
+          <p class="skill-desc editable">{{skill5.desc}}</p>
         </div>
 
         <div class="skill-card fade-in">
           <div class="skill-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <h3 class="skill-title editable">Relaciones Públicas y Eventos Corporativos</h3>
-          <p class="skill-desc editable">Cotización y organización logística de eventos corporativos, sesiones de trabajo y Team Building, en coordinación con proveedores y prestadores de servicios locales.</p>
+          <h3 class="skill-title editable">{{skill6.title}}</h3>
+          <p class="skill-desc editable">{{skill6.desc}}</p>
         </div>
       </div>
     </div>
@@ -1595,8 +1548,8 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <div>
-            <h3 class="edu-degree editable">Licenciatura en Administración de Empresas</h3>
-            <p class="edu-field editable">Universidad Tecnológica de México · Nov 2017</p>
+            <h3 class="edu-degree editable">{{edu1.degree}}</h3>
+            <p class="edu-field editable">{{edu1.field}}</p>
           </div>
         </div>
 
@@ -1605,8 +1558,8 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <div>
-            <h3 class="edu-degree editable">Licenciatura en Periodismo</h3>
-            <p class="edu-field editable">Escuela de Periodismo Carlos Septién García · 1982–1986</p>
+            <h3 class="edu-degree editable">{{edu2.degree}}</h3>
+            <p class="edu-field editable">{{edu2.field}}</p>
           </div>
         </div>
       </div>
@@ -1614,28 +1567,28 @@
       <h3 class="certs-title fade-in">Certificaciones y Herramientas</h3>
       <div class="certs-grid fade-in">
         <div class="cert-badge">
-          <span class="cert-label editable">"M"</span>
-          <span class="cert-name editable">Quality Label<br/>Accor Hotels</span>
+          <span class="cert-label editable">{{cert1.label}}</span>
+          <span class="cert-name editable">{{{cert1.name}}}</span>
         </div>
         <div class="cert-badge">
-          <span class="cert-label editable">"H"</span>
-          <span class="cert-name editable">Quality Label<br/>Accor Hotels</span>
+          <span class="cert-label editable">{{cert2.label}}</span>
+          <span class="cert-name editable">{{{cert2.name}}}</span>
         </div>
-        <div class="cert-badge" style="">
-          <span class="cert-label editable" style="font-size:1rem;">Opera</span>
-          <span class="cert-name editable">Opera &amp;<br/>Opera Cloud</span>
+        <div class="cert-badge">
+          <span class="cert-label editable" style="font-size:1rem;">{{cert3.label}}</span>
+          <span class="cert-name editable">{{{cert3.name}}}</span>
         </div>
-        <div class="cert-badge" style="">
-          <span class="cert-label editable" style="font-size:1rem;">IATA</span>
-          <span class="cert-name editable">IATA FUAAV<br/>Certificación</span>
+        <div class="cert-badge">
+          <span class="cert-label editable" style="font-size:1rem;">{{cert4.label}}</span>
+          <span class="cert-name editable">{{{cert4.name}}}</span>
         </div>
-        <div class="cert-badge" style="">
-          <span class="cert-label editable" style="font-size:1rem;">SABRE</span>
-          <span class="cert-name editable">Sistema<br/>SABRE GDS</span>
+        <div class="cert-badge">
+          <span class="cert-label editable" style="font-size:1rem;">{{cert5.label}}</span>
+          <span class="cert-name editable">{{{cert5.name}}}</span>
         </div>
-        <div class="cert-badge" style="">
-          <span class="cert-label editable" style="font-size:1rem;">B2–C1</span>
-          <span class="cert-name editable">Inglés · Upper<br/>Madison College</span>
+        <div class="cert-badge">
+          <span class="cert-label editable" style="font-size:1rem;">{{cert6.label}}</span>
+          <span class="cert-name editable">{{{cert6.name}}}</span>
         </div>
       </div>
     </div>
@@ -1748,9 +1701,6 @@
   </div>
 
   <div class="toast" id="toast">✓ Mensaje enviado. Me pondré en contacto pronto.</div>
-
-  <!-- ═══ Surreal CMS — paste your site script tag here after connecting the GitHub repo ═══ -->
-  <!-- <script src="https://surrealcms.com/assets/surreal.js?t=YOUR_TOKEN_HERE"></script> -->
 
   <!-- ═══════════ JS ═══════════ -->
   <script>
@@ -1960,6 +1910,18 @@
       }
       requestAnimationFrame(draw);
     })();
+  </script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function() {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
   </script>
 
 </body>

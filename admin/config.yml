@@ -1,0 +1,209 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "."
+public_folder: "."
+
+collections:
+  - name: "content"
+    label: "Contenido del Sitio"
+    files:
+
+      - name: "hero"
+        label: "🏠 Hero — Presentación principal"
+        file: "_data/content.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Título profesional", name: "title", widget: "string" }
+              - { label: "Frase principal", name: "tagline", widget: "text", hint: "Puedes usar <strong>texto</strong> para negritas." }
+              - { label: "Estadística 1 — Número", name: "stat1_number", widget: "string" }
+              - { label: "Estadística 1 — Etiqueta", name: "stat1_label", widget: "string" }
+              - { label: "Estadística 2 — Número", name: "stat2_number", widget: "string" }
+              - { label: "Estadística 2 — Etiqueta", name: "stat2_label", widget: "string" }
+          - label: "Sobre mí"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Cita destacada", name: "quote", widget: "text" }
+              - { label: "Párrafo 1", name: "p1", widget: "text", hint: "Puedes usar <strong>texto</strong> para negritas." }
+              - { label: "Párrafo 2", name: "p2", widget: "text" }
+              - { label: "Párrafo 3", name: "p3", widget: "text" }
+              - { label: "Pilar 1 — Título", name: "pillar1_title", widget: "string" }
+              - { label: "Pilar 1 — Descripción", name: "pillar1_desc", widget: "string" }
+              - { label: "Pilar 2 — Título", name: "pillar2_title", widget: "string" }
+              - { label: "Pilar 2 — Descripción", name: "pillar2_desc", widget: "string" }
+              - { label: "Pilar 3 — Título", name: "pillar3_title", widget: "string" }
+              - { label: "Pilar 3 — Descripción", name: "pillar3_desc", widget: "string" }
+          - label: "Experiencia 1 (más reciente)"
+            name: "exp1"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Experiencia 2"
+            name: "exp2"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Experiencia 3"
+            name: "exp3"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Experiencia 4"
+            name: "exp4"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Experiencia 5"
+            name: "exp5"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Experiencia 6"
+            name: "exp6"
+            widget: "object"
+            fields:
+              - { label: "Empresa y fechas", name: "company", widget: "string" }
+              - { label: "Puesto", name: "role", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+              - { label: "Ubicación", name: "tag", widget: "string" }
+          - label: "Logro 1"
+            name: "ach1"
+            widget: "object"
+            fields:
+              - { label: "Métrica (número grande)", name: "metric", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Logro 2"
+            name: "ach2"
+            widget: "object"
+            fields:
+              - { label: "Métrica (número grande)", name: "metric", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Logro 3"
+            name: "ach3"
+            widget: "object"
+            fields:
+              - { label: "Métrica (número grande)", name: "metric", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Logro 4"
+            name: "ach4"
+            widget: "object"
+            fields:
+              - { label: "Métrica (número grande)", name: "metric", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Logro 5"
+            name: "ach5"
+            widget: "object"
+            fields:
+              - { label: "Métrica (número grande)", name: "metric", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 1"
+            name: "skill1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 2"
+            name: "skill2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 3"
+            name: "skill3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 4"
+            name: "skill4"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 5"
+            name: "skill5"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Habilidad 6"
+            name: "skill6"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+          - label: "Educación 1"
+            name: "edu1"
+            widget: "object"
+            fields:
+              - { label: "Título del grado", name: "degree", widget: "string" }
+              - { label: "Institución y año", name: "field", widget: "string" }
+          - label: "Educación 2"
+            name: "edu2"
+            widget: "object"
+            fields:
+              - { label: "Título del grado", name: "degree", widget: "string" }
+              - { label: "Institución y año", name: "field", widget: "string" }
+          - label: "Certificación 1"
+            name: "cert1"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+          - label: "Certificación 2"
+            name: "cert2"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+          - label: "Certificación 3"
+            name: "cert3"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+          - label: "Certificación 4"
+            name: "cert4"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+          - label: "Certificación 5"
+            name: "cert5"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }
+          - label: "Certificación 6"
+            name: "cert6"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta (texto grande)", name: "label", widget: "string" }
+              - { label: "Nombre", name: "name", widget: "string" }

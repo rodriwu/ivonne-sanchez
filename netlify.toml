@@ -1,0 +1,6 @@
+[build]
+  command   = "npm install && node build.js"
+  publish   = "public"
+
+[build.environment]
+  NODE_VERSION = "18"

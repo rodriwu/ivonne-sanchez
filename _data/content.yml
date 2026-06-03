@@ -1,0 +1,191 @@
+hero:
+  eyebrow: Liderazgo Ejecutivo en Hospitalidad
+  name: Ivonne Sánchez R.
+  title: Gerente General · Directora Hotelera · Estratega Corporativa
+  tagline: >-
+    Más de veinte años convirtiendo operaciones hoteleras en
+    <strong>historias de éxito medibles</strong>, con mano firme,
+    liderazgo humano y resultados que hablan por sí solos.
+  stat1_number: "20+"
+  stat1_label: Años de experiencia
+  stat2_number: "5"
+  stat2_label: Propiedades dirigidas
+
+about:
+  quote: >-
+    "El verdadero liderazgo hotelero no reside únicamente en los números —
+    reside en la capacidad de inspirar equipos, superar expectativas de los
+    huéspedes y construir operaciones que perduran."
+  p1: >-
+    A lo largo de más de dos décadas, he liderado con determinación operaciones hoteleras de
+    alto volumen en cadenas de reconocimiento internacional como <strong>Accor Hotels</strong>,
+    <strong>Grupo Vidanta</strong> y <strong>City Express</strong>. Mi trayectoria como Gerente
+    General abarca desde la planificación estratégica hasta la supervisión diaria en piso, con
+    un enfoque que nunca pierde de vista el factor más valioso de cualquier organización: las personas.
+  p2: >-
+    Creo profundamente en el liderazgo con propósito. Cada equipo que he guiado ha experimentado
+    un crecimiento tangible —en cultura, en desempeño y en resultados financieros— porque
+    un ambiente de trabajo sólido es la base de una operación hotelera extraordinaria.
+  p3: >-
+    Estoy preparada para aportar esta combinación única de experiencia ejecutiva, sensibilidad
+    humana y orientación a resultados a cualquier empresa que aspire a elevar su estándar.
+  pillar1_title: Visión estratégica
+  pillar1_desc: Diseño y ejecución de planes corporativos de alto impacto.
+  pillar2_title: Liderazgo centrado en las personas
+  pillar2_desc: Formación de equipos comprometidos y culturas organizacionales sólidas.
+  pillar3_title: Orientación a resultados
+  pillar3_desc: Métricas claras, metas superadas y premios de industria que lo certifican.
+
+exp1:
+  company: "Accor Hotels — Ibis · Sept 2025 – A la fecha"
+  role: Gerente General · Ibis México Alameda
+  desc: >-
+    Responsable de la logística diaria y supervisión de todas las actividades del hotel.
+    Diseño de estrategias y tácticas organizacionales, cambio de procesos en revisión
+    de habitaciones mediante sistema propio, controles de inventarios y cotización de
+    eventos corporativos con proveedores locales (Team Building, sesiones de trabajo).
+  tag: Ciudad de México
+
+exp2:
+  company: "Accor Hotels — Ibis · Agosto 2023 – 2025"
+  role: Gerente General · Hotel Ibis Irapuato
+  desc: >-
+    Organización y logística diaria del hotel, estrategias en área de Ventas, supervisión
+    operativa y elaboración de presupuesto anual. Logros: incremento en tarifa promedio
+    del 15%, captación de nuevos clientes, actualización de equipos de Recepción
+    (PC, sistemas Vision, Ópera) y rehabilitación de A.A. y elevadores.
+  tag: Irapuato, Guanajuato
+
+exp3:
+  company: "Grupo Vidanta · 2019 – 2020"
+  role: Gerente General / Residente · Mayan Palace Mazatlán
+  desc: >-
+    Responsable de la logística diaria del hotel, informes de ingreso, ventas y
+    presupuestos. Apoyo operativo, guía y motivación del staff hotelero. Optimización
+    de presupuestos en banquetes, habitaciones y personal, con seguimiento
+    minucioso de los protocolos establecidos.
+  tag: Mazatlán, Sinaloa
+
+exp4:
+  company: "Accor Hotels — Ibis · 2015 – 2019"
+  role: Gerente General · Hotel Ibis México Perinorte
+  desc: >-
+    Logística y supervisión diaria, estrategias organizacionales y presidencia de las
+    reuniones del Comité Ejecutivo para gerentes regionales de Accor. Premio
+    Reputation Performance Score por reducción del 15% en quejas de huéspedes.
+    Visitas a cuentas top ten y organización de eventos en el Estado de México.
+  tag: Estado de México
+
+exp5:
+  company: "City Express Hotels · 2012 – 2014"
+  role: "Gerente General · City Express Querétaro & Celaya"
+  desc: >-
+    Planeación, organización, control y supervisión en piso. Análisis de reportes de
+    ingreso y ventas. Premio al Mejor Crecimiento Comercial a nivel cadena (2013) por
+    captación de Honda, Yorosu y Yutaka en la zona del Bajío.
+  tag: "Querétaro & Celaya, Qro."
+
+exp6:
+  company: "Quality Inn · 2010 – 2012"
+  role: Gerente General · Quality Inn Horizon
+  desc: >-
+    Dirección integral de la propiedad, garantizando los estándares operativos
+    y de servicio al huésped de la cadena internacional Quality Inn.
+  tag: Morelia, Michoacán
+
+ach1:
+  metric: "+15%"
+  title: Incremento en Tarifa Promedio (ADR)
+  desc: Estrategias de revenue management que elevaron el valor percibido de la propiedad sin sacrificar la ocupación.
+
+ach2:
+  metric: Premio
+  title: Reputation Performance Score
+  desc: Reconocimiento por la reducción del 15% en quejas de huéspedes mediante protocolos de atención mejorados.
+
+ach3:
+  metric: 1er Lugar
+  title: Mejor Crecimiento Comercial a Nivel Cadena
+  desc: >-
+    Premio nacional por el mejor desarrollo, atención y captación de clientes corporativos
+    clave como Honda, Yorosu y Yutaka en la zona del Bajío.
+
+ach4:
+  metric: "-15%"
+  title: Reducción de Quejas de Huéspedes
+  desc: Disminución sostenida impulsada por cultura de servicio orientada a la excelencia y protocolos de calidad.
+
+ach5:
+  metric: "5+"
+  title: Propiedades Dirigidas con Éxito
+  desc: >-
+    Liderazgo comprobado en múltiples formatos: urbano, corporativo y destino vacacional,
+    con resultados positivos en cada transición.
+
+skill1:
+  title: Gestión y Logística Hotelera
+  desc: >-
+    Responsable de la logística y organización diaria de múltiples hoteles, incluyendo
+    planeación, control y supervisión en piso de todas las actividades cotidianas.
+
+skill2:
+  title: Estrategia Corporativa y Comercial
+  desc: >-
+    Diseño e implementación de estrategias organizacionales y planes de ventas de alto impacto,
+    con análisis detallado de reportes de ingresos para decisiones basadas en datos.
+
+skill3:
+  title: Liderazgo y Gestión de Equipos
+  desc: >-
+    Amplia capacidad para guiar y motivar al staff hotelero, con experiencia presidiendo
+    reuniones del Comité Ejecutivo a nivel regional.
+
+skill4:
+  title: Gestión Financiera
+  desc: >-
+    Elaboración de presupuestos anuales y optimización de recursos en banquetes, habitaciones
+    y nómina. Control del P&L con enfoque en rentabilidad sostenible.
+
+skill5:
+  title: Optimización de Procesos
+  desc: >-
+    Implementación de mejoras en revisión de habitaciones mediante sistemas digitales, controles
+    de inventarios y seguimiento de protocolos para garantizar eficiencia operativa.
+
+skill6:
+  title: Relaciones Públicas y Eventos Corporativos
+  desc: >-
+    Cotización y organización logística de eventos corporativos, sesiones de trabajo y
+    Team Building, en coordinación con proveedores y prestadores de servicios locales.
+
+edu1:
+  degree: Licenciatura en Administración de Empresas
+  field: Universidad Tecnológica de México · Nov 2017
+
+edu2:
+  degree: Licenciatura en Periodismo
+  field: Escuela de Periodismo Carlos Septién García · 1982–1986
+
+cert1:
+  label: '"M"'
+  name: "Quality Label<br>Accor Hotels"
+
+cert2:
+  label: '"H"'
+  name: "Quality Label<br>Accor Hotels"
+
+cert3:
+  label: Opera
+  name: "Opera &amp;<br>Opera Cloud"
+
+cert4:
+  label: IATA
+  name: "IATA FUAAV<br>Certificación"
+
+cert5:
+  label: SABRE
+  name: "Sistema<br>SABRE GDS"
+
+cert6:
+  label: B2–C1
+  name: "Inglés · Upper<br>Madison College"
